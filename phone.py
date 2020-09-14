@@ -29,6 +29,20 @@ class IPhone(Phone):
         else:
             print("Phone locked. Fingerprint does not match")  
 
+class Android(Phone):
+    def __init__(self, phone_number):
+        super().__init__(phone_number)
+        self.keyboard= "Default"
+
+    def __str__():
+        return "This phone is owned by{}".format(self.number)
+
+    def set_keyboard(self, new_keyboard):
+        self.keyboard = new_keyboard
+
+Android.ORIGIN = Android("")
+
+
 martin_iphone = IPhone(1111111111)
 print("Martine's number is {}".format(martin_iphone.number))  
 
@@ -40,4 +54,14 @@ martin_iphone.unlock("password123")
 martin_iphone.call(4444444444)
 
 martin_iphone.open_app("Tik Tok")
+
+josh_phone = Android(2221112222)
+
+josh_phone.set_keyboard("Dvorak")
+
+josh_phone.call(8887779999)
+
+josh_phone.open_app("Google Play Store")
+
+print(josh_phone)
 
