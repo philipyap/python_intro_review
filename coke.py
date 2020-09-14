@@ -1,6 +1,8 @@
 class Coke():
-    def __init__(self,capacity):
+    def __init__(self,capacity, name, mtype):
         self.capacity = capacity
+        self.name = name
+        self.mtype = mtype
         self.amount = 0
     
 
